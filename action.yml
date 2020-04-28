@@ -31,4 +31,4 @@ runs:
   args:
     - /replicated release create
     - --app=${{ inputs.replicated-app }} --token=${{ inputs.replicated-api-token }} --promote=${{ inputs.promote-channel }} --ensure-channel --yaml-dir=${{ inputs.yaml-dir }} --version=${{ inputs.version }}
-    - --release-notes=${{ inputs.release-notes }}
+    - --release-notes=\"${{ inputs.release-notes }}\"
