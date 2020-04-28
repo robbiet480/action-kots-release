@@ -28,7 +28,7 @@ inputs:
 runs:
   using: 'docker'
   image: 'docker://replicated/vendor-cli:0.23.0'
-  entrypoint: ["/bin/sh -c", "/replicated", "release", "create"]
+  entrypoint: "/bin/sh -c /replicated release create"
   args:
     - --app=${{ inputs.replicated-app }} --token=${{ inputs.replicated-api-token }} --promote=${{ inputs.promote-channel }} --ensure-channel --yaml-dir=${{ inputs.yaml-dir }} --version=${{ inputs.version }}
     - --release-notes=${{ inputs.release-notes }}
