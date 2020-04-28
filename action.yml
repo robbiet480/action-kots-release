@@ -31,15 +31,15 @@ runs:
   args:
     - '/replicated release create'
     - '--app'
-    - ${{ inputs.replicated-app }}
+    - "${{ inputs.replicated-app }}"
     - '--token'
-    - ${{ inputs.replicated-api-token }}
+    - "${{ inputs.replicated-api-token }}"
     - '--promote'
-    - ${{ inputs.promote-channel }}
+    - "${{ inputs.promote-channel }}"
     - '--ensure-channel'
     - '--yaml-dir'
-    - ${{ inputs.yaml-dir }}
+    - "${{ inputs.yaml-dir }}"
     - '--release-notes'
-    - ${{ inputs.release-notes }}
+    - "${{ inputs.release-notes }}"
     - --version
-    - ${{ inputs.version }}
+    - "${{ inputs.version }}"
