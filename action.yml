@@ -29,8 +29,7 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - /replicated release create --app=${{ inputs.replicated-app }} --token=${{ inputs.replicated-api-token }} --promote=${{ inputs.promote-channel }} --ensure-channel --yaml-dir=${{ inputs.yaml-dir }} --version=${{ inputs.version }}
-  #  --release-notes=${{ inputs.release-notes }}
+    - /replicated release create --app=${{ inputs.replicated-app }} --token=${{ inputs.replicated-api-token }} --promote=${{ inputs.promote-channel }} --ensure-channel --yaml-dir=${{ inputs.yaml-dir }} --version=${{ inputs.version }} --release-notes=${{ inputs.release-notes }}
   env:
     REPLICATED_APP: ${{ inputs.replicated-app }}
     REPLICATED_API_TOKEN: ${{ inputs.replicated-api-token }}
